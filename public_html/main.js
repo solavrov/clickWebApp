@@ -13,19 +13,18 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // Get database reference
-var database = firebase.database();
+var db = firebase.database();
 
-var dbCounterValue = database.ref('data/counter');
+var dbCounter = db.ref('data/counter');
 
 var counter = document.getElementById("counter");
 var button = document.getElementById("button");
 
-dbCounterValue.on('value', function(snapshot) {
+dbCounter.on('value', function(snapshot) {
     counter.innerText = snapshot.val();
 });
 
 button.addEventListener("click", function(){
-    dbCounterValue.set(parseInt(counter.innerText) + 1);
+    dbCounter.set(parseInt(counter.innerText) + 1);
 });
-
 
