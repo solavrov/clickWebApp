@@ -5,10 +5,54 @@
         <title>ClickWebApp</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: black;
+            }
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .counter {
+                font-family: "Arial";
+                font-size: 20pt;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+            }
+            .button {
+                display: inline-block;
+                padding: 10pt 20pt;
+                font-size: 15pt;
+                font-weight: bold;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #fff;
+                background-color: red;
+                border: none;
+                border-radius: 10pt;
+                box-shadow: 0 1pt #999;
+            }
+            .button:hover {
+                background-color: darkred
+            }
+            .button:active {
+                background-color: darkred;
+                box-shadow: 0 1pt #666;
+                transform: translateY(2pt);
+            }
+        </style>
     </head>
     <body>
-        <p id="counter">wait...</p>
-        <button id="button">click</button>
+        
+        <div class="center">
+            <p id="counter" class="counter">wait...</p>
+            <button id="button" class="button">CLICK</button>
+        </div>
         
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
