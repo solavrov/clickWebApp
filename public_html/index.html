@@ -16,34 +16,32 @@
                 transform: translate(-50%, -50%);
             }
             .counter {
-                font-family: "Arial";
-                font-size: 20pt;
+                font-family: "Verdana";
+                font-size: 25pt;
                 font-weight: bold;
                 color: white;
                 text-align: center;
             }
             .button {
-                display: inline-block;
-                padding: 10pt 20pt;
-                font-size: 15pt;
+                padding: 20pt 20pt;
+                font-size: 30pt;
+                font-family: "Verdana";
                 font-weight: bold;
-                cursor: pointer;
                 text-align: center;
-                text-decoration: none;
                 outline: none;
-                color: #fff;
+                color: white;
                 background-color: red;
-                border: none;
-                border-radius: 10pt;
-                box-shadow: 0 1pt #999;
+                border: 2pt solid white;
+                border-radius: 50%;
+                box-shadow: 0pt 3pt white;
             }
             .button:hover {
                 background-color: darkred
             }
             .button:active {
                 background-color: darkred;
-                box-shadow: 0 1pt #666;
-                transform: translateY(2pt);
+                box-shadow: 0pt 0pt white;
+                transform: translateY(3pt);
             }
         </style>
     </head>
@@ -51,7 +49,7 @@
         
         <div class="center">
             <p id="counter" class="counter">wait...</p>
-            <button id="button" class="button">CLICK</button>
+            <button id="button" class="button">+1</button>
         </div>
         
         <!-- The core Firebase JS SDK is always required and must be listed first -->
