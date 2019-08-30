@@ -21,10 +21,10 @@ var counter = document.getElementById("counter");
 var button = document.getElementById("button");
 
 dbCounter.on('value', function(snapshot) {
-    counter.innerText = snapshot.val();
+    counter.innerText = snapshot.val().toLocaleString('en-US');
 });
 
 button.addEventListener("click", function(){
-    dbCounter.set(parseInt(counter.innerText) + 1);
+    dbCounter.set(parseInt(counter.innerText.replace(/,/g, '')) + 1);
 });
 
