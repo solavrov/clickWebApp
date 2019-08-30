@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 // Get database reference
 var db = firebase.database();
 
-var dbCounter = db.ref('data/counter');
+var dbCounter = db.ref('counter');
 
 var counter = document.getElementById("counter");
 var button = document.getElementById("button");
