@@ -9,23 +9,26 @@
             body {
                 background-color: black;
             }
-            .center {
+            div {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             .counter {
-                font-family: "Verdana";
-                font-size: 25pt;
+                font-family: "Consolas";
+                font-size: 30pt;
                 font-weight: bold;
                 color: white;
                 text-align: center;
             }
             .button {
-                padding: 20pt 20pt;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0pt);
+                padding: 15pt 20pt;
                 font-size: 30pt;
-                font-family: "Verdana";
+                font-family: "Consolas";
                 font-weight: bold;
                 text-align: center;
                 outline: none;
@@ -41,13 +44,13 @@
             .button:active {
                 background-color: darkred;
                 box-shadow: 0pt 0pt white;
-                transform: translateY(3pt);
+                transform: translate(-50%, 3pt);
             }
         </style>
     </head>
     <body>
         
-        <div class="center">
+        <div>
             <p id="counter" class="counter">wait...</p>
             <button id="button" class="button">+1</button>
         </div>
